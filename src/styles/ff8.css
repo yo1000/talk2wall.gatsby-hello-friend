@@ -1,0 +1,131 @@
+body {
+    font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif !important;
+}
+
+.logo-container {
+    width: 100%;
+
+    .cover {
+        position: absolute;
+        top: 0px;
+        z-index: -10;
+        
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            bottom: 0;
+            z-index: 10;
+            background: linear-gradient(180deg,transparent, var(--dark-background));
+        }
+    }
+
+    .logo {
+        width: 400px;
+        margin: -380px auto 280px;
+  
+        @media (--tablet) {
+            margin: -305px auto 225px;
+            width: 300px;
+        }
+  
+        @media (--phone) {
+            width: 45%;
+            margin: -46% auto 32%;
+        }
+    }
+}
+
+.dark-theme {
+    .post {
+        font-weight: 400;
+        margin: 0 auto 10px;
+
+        &:not(:last-of-type) {
+            border-bottom: 0;
+        }
+
+        .postContent {
+            border-radius: 2px;
+            border-left: 6px groove #747474;
+            border-top: 6px groove #747474; 
+            border-right: 6px ridge #313131; 
+            border-bottom: 6px ridge #313131;
+            background: linear-gradient(to right, rgba(68, 68, 68, .67), rgba(116, 116, 116, .67)) center center;
+  
+            padding: 1rem 1.5rem 1.25rem;
+            color: rgba(237, 237, 237, .5625);
+            text-shadow: rgba( 65,  65,  49, .625) 1px 1px;
+
+            color: #aaa;
+            text-shadow: #443 1px 1px;
+
+            &:nth-of-type(1) {
+                margin-top: -2rem;
+            }
+          
+            h1, h2, h3, h4, h5, h6 {
+                color: #eee;
+            }
+
+            h1 {
+                text-shadow: #443 3px 3px;
+            }
+
+            h2, h3, h4, h5, h6 {
+                text-shadow: #443 2px 2px;
+            }
+
+            .tags,
+            .readMore,
+            .navigation {
+                margin-bottom: 0;
+                opacity: unset;
+
+                &> span {
+                    background: none;
+                }
+
+                a {
+                    margin-bottom: 0;
+                    font-weight: 600;
+                    color: #9494a4 !important;
+                    text-shadow: #443 2px 2px !important;
+                }
+            }
+
+            .navigation {
+                margin-top: 30px;
+            }
+
+            @media (--phone) {
+                padding: .75rem 1.25rem 1rem;
+            }
+        }
+    }
+
+    .index.post-container .post {
+        &:nth-of-type(1) {
+            margin-top: -40px;
+
+            @media (--tablet) {
+                margin-top: -28px;
+            }
+        
+            @media (--phone) {
+                margin-top: -2%;
+            }
+        }
+    }
+
+    .page.post-container .post {
+        margin-top: 30px;
+
+        a {
+            color: #6ab4ee;
+            text-shadow: #292929 1px 1px;
+        }
+    }
+}
