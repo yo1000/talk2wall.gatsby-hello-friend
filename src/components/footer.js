@@ -11,12 +11,15 @@ const Footer = ({ copyrights }) => (
       />
     ) : (
       <>
-        <span className="footerCopyrights">
-          © 2019 Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </span>
-        <span className="footerCopyrights">
-          Starter created by <a href="https://radoslawkoziel.pl">panr</a>
-        </span>
+        <div className="footerCopyrights">
+          Copyright (C) 2019 Built with <a href="https://www.gatsbyjs.org">Gatsby</a> | Starter created by <a href="https://radoslawkoziel.pl">panr</a>
+        </div>
+        <div className="footerCopyrights">
+          Copyright (C) 2017-{new Date().getFullYear()} yo1000 | YO!CHI KIKUCHI
+        </div>
+        <div className="footerCopyrights">
+          Copyright (C) 1999, 2019 SQUARE ENIX CO., LTD. All Rights Reserved.
+        </div>
       </>
     )}
   </footer>

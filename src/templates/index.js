@@ -22,7 +22,7 @@ const Index = ({
     <>
       <SEO />
       <Layout>
-        <div class="logo-container">
+        <div class="main-logo-container">
           <StaticImage relativePath="logo/cover.png" className="cover" />
           <StaticImage relativePath="logo/logo.png" className="logo" />
         </div>
