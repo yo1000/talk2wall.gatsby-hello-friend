@@ -7,18 +7,19 @@ const postCSSMixins = require('postcss-mixins')
 
 module.exports = {
   siteMetadata: {
-    title: `Hello Friend`,
-    description: `A simple starter for Gatsby. That's it.`,
+    title: `talk2wall`,
+    description: `Then go talk to a wall.`,
+    siteUrl: 'https://www.yo1000.com',
     copyrights: '',
-    author: `@panr`,
+    author: `yo1000 | YO!CHI KIKUCHI`,
     logo: {
       src: '',
       alt: '',
     },
-    logoText: 'hello friend',
+    logoText: '壁にでも話してろ',
     defaultTheme: 'dark',
     postsPerPage: 5,
-    showMenuItems: 2,
+    showMenuItems: 5,
     menuMoreText: 'Show more',
     mainMenu: [
       {
@@ -26,12 +27,20 @@ module.exports = {
         path: '/about',
       },
       {
-        title: 'Showcase',
-        path: '/showcase',
+        title: 'RSS',
+        path: '/rss.xml',
       },
       {
-        title: 'Example',
-        path: '/example',
+        title: 'Spring',
+        path: '/tag/Spring',
+      },
+      {
+        title: 'Kotlin',
+        path: '/tag/Kotlin',
+      },
+      {
+        title: 'Java',
+        path: '/tag/Java',
       },
     ],
   },
@@ -114,13 +123,72 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-hello-friend`,
-        short_name: `hello-friend`,
+        name: `talk2wall`,
+        short_name: `talk2wall`,
         start_url: `/`,
         background_color: `#292a2d`,
         theme_color: `#292a2d`,
         display: `minimal-ui`,
         icon: `src/images/hello-icon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                author
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: `${site.siteMetadata.siteUrl}${node.frontmatter.path}`,
+                  guid: `${site.siteMetadata.siteUrl}${node.frontmatter.path}`,
+                  custom_elements: [{ 'content:encoded': node.html }],
+                });
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    id
+                    excerpt
+                    frontmatter {
+                      author
+                      date
+                      path
+                      title
+                      tags
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: 'talk2wall',
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: '^/',
+          },
+        ],
       },
     },
   ],
