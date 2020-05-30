@@ -69,11 +69,34 @@ body {
     }
 }
 
-.footerCopyrights {
-    font-weight: 400;
+footer {
+    margin: 0 auto 19px !important;
+    display: grid;
+    align-items: center;
+    text-align: left !important;
+    justify-content: space-between;
+    width: 800px;
+    max-width: 100%;
+    padding: 0 20px !important;
 
-    &:not(:first-of-type) {
-        border: none !important;
+    @media (max-width: 899px) {
+        max-width: 660px;
+    }
+
+    @media (max-width: 683px) {
+        display: initial !important;
+        flex-direction: initial !important;
+    }
+
+    .footerCopyrights {
+        font-size: .8rem;
+        font-weight: 400;
+    
+        &:not(:first-of-type) {
+            border: none !important;
+            margin-left: 0 !important;
+            padding-left: 0 !important;
+        }
     }
 }
 
