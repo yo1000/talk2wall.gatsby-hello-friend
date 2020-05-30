@@ -69,6 +69,53 @@ body {
     }
 }
 
+header {
+    .navbar-item {
+        margin: 0 0 0 auto;
+
+        input {
+            width: 8rem;
+            padding: 4px;
+            border-style: none;
+            border-radius: 2px;
+        }
+
+        .navbar-dropdown {
+            display: block;
+            position: absolute;
+            padding: 4px;
+            margin: 4px 0;
+            z-index: 10;
+            /* background: rgba(37,38,39,.975);
+            padding: 4px 12px;
+            border-radius: 0 0 4px 4px; */
+
+            background: linear-gradient(90deg,rgba(68,68,68,.975),hsla(0,0%,45.5%,.975)) 50%;
+            border-radius: 2px;
+            border-width: 4px;
+            border-style: groove ridge ridge groove; /* Top Right Bottom Left */
+            border-color: #747474 #313131 #313131 #747474;
+            color: #aaa;
+            text-shadow: #443 1px 1px;
+
+            a {
+                display: block;
+                padding: 0 8px;
+                text-align: left;
+                font-weight: 400;
+
+                &:hover {
+                    background: rgba(37,38,39,.5);
+                }
+            }
+        }
+    }
+
+    .mobileMenuContainer {
+        margin-left: 10px;
+    }
+}
+
 footer {
     margin: 0 auto 19px !important;
     display: grid;

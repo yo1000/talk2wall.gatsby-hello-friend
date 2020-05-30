@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import { Link, graphql, StaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
 import Menu from './menu'
+import SearchBox from './searchBox'
 
 import style from '../styles/header.module.css'
 
@@ -34,8 +35,16 @@ const Header = props => {
   const onToggleMobileMenu = () => toggleMobileMenu(!isMobileMenuVisible)
   const onToggleSubMenu = () => toggleSubMenu(!isSubMenuVisible)
 
-  return (
-    <>
+  return (<StaticQuery
+    query={graphql`
+            query SearchIndexQuery {
+                siteSearchIndex {
+                    index
+                }
+            }
+        `}
+    render={data => (
+      <>
       <Helmet>
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet"/>
         <body
@@ -61,6 +70,7 @@ const Header = props => {
               )}
             </div>
           </Link>
+          <SearchBox searchIndex={data.siteSearchIndex.index} />
           <span className={style.right}>
             <Menu
               mainMenu={mainMenu}
@@ -75,8 +85,52 @@ const Header = props => {
           </span>
         </div>
       </header>
-    </>
+      </>
+    )}/>
   )
+  // return (
+  //   <>
+  //     <Helmet>
+  //       <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet"/>
+  //       <body
+  //         className={
+  //           (userTheme || defaultTheme) === 'light'
+  //             ? 'light-theme'
+  //             : 'dark-theme'
+  //         }
+  //       />
+  //     </Helmet>
+  //     <header className={style.header}>
+  //       <div className={style.inner}>
+  //         <Link to="/">
+  //           <div className={style.logo + ' nav-logo-container'}>
+  //             {siteLogo.src ? (
+  //               <img src={siteLogo.src} alt={siteLogo.alt} />
+  //             ) : (
+  //               <>
+  //                 <span className={style.mark + ' mark'}>></span>
+  //                 <span className={style.text + ' text'}>{logoText}</span>
+  //                 <span className={style.cursor + ' cursor'} />
+  //               </>
+  //             )}
+  //           </div>
+  //         </Link>
+  //         <span className={style.right}>
+  //           <Menu
+  //             mainMenu={mainMenu}
+  //             mainMenuItems={mainMenuItems}
+  //             isMobileMenuVisible={isMobileMenuVisible}
+  //             isSubMenuVisible={isSubMenuVisible}
+  //             menuMoreText={menuMoreText}
+  //             onToggleMobileMenu={onToggleMobileMenu}
+  //             onToggleSubMenu={onToggleSubMenu}
+  //             onChangeTheme={onChangeTheme}
+  //           />
+  //         </span>
+  //       </div>
+  //     </header>
+  //   </>
+  // )
 }
 
 Header.propTypes = {

@@ -60,7 +60,7 @@ const Menu = ({
 
   return (
     <>
-      <div className={style.mobileMenuContainer}>
+      <div className={style.mobileMenuContainer + ' mobileMenuContainer'}>
         <>
           {isMobileMenuVisible ? (
             <>
@@ -86,7 +86,7 @@ const Menu = ({
           </button>
         </>
       </div>
-      <div className={style.desktopMenuContainer}>
+      <div className={style.desktopMenuContainer + ' desktopMenuContainer'}>
         <ul className={style.menu}>
           <MainMenu mainMenu={mainMenu} mainMenuItems={mainMenuItems} />
           {isSubMenu ? (

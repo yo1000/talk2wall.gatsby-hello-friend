@@ -19,8 +19,8 @@ module.exports = {
     logoText: '壁にでも話してろ',
     defaultTheme: 'dark',
     postsPerPage: 5,
-    showMenuItems: 5,
-    menuMoreText: 'Show more',
+    showMenuItems: 2,
+    menuMoreText: 'Main Tags',
     mainMenu: [
       {
         title: 'About',
@@ -189,6 +189,23 @@ module.exports = {
             match: '^/',
           },
         ],
+      },
+    },
+    {
+      resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+      options: {
+        // Fields to index
+        fields: [`title`, `tags`],
+        // How to resolve each field`s value for a supported node type
+        resolvers: {
+          // For any node of type MarkdownRemark, list how to resolve the fields` values
+          MarkdownRemark: {
+            title: node => node.frontmatter.title,
+            tags: node => node.frontmatter.tags,
+            path: node => node.frontmatter.path,
+            slug: node => node.rawMarkdownBody,
+          },
+        },
       },
     },
   ],
