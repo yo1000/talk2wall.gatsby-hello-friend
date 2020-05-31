@@ -46,7 +46,7 @@ const Header = props => {
     render={data => (
       <>
       <Helmet>
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700&display=swap" rel="stylesheet"/>
         <body
           className={
             (userTheme || defaultTheme) === 'light'
