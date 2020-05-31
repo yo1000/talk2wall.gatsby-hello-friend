@@ -1,23 +1,20 @@
 ---
 title: "About"
-date: "2018-07-19"
-author: "Radek"
+date: "2020-05-31"
+author: "yo1000"
 path: "/about"
 ---
 
-## Hi there
+## About this site
+仕事やプライベートの開発で躓いたことなどを書き留めています。万人受けするものばかりでもないので、自戒の意味も込めて「壁にでも話してろ」としています。
 
-My name is Radek and I'm the author of this starter. I made it to help you present your ideas easier.
+当然 FF VIII が与えた影響は小さくないです。
 
-We all know how hard is to start something on the web, especially these days. You need to prepare a bunch of stuff, configure them and when that’s done — create the content.
+## About me
+Spring, Kotlin, Java あたりをつかったサーバーサイド プログラミングを主な生業としています。モデリングなんかの設計でうんうん悩むのも好きです。アプリケーションアーキテクトのようなことをしたり、開発基盤の設計、整備、改善なんかもよくやってきました。
+- Java (2005-)
+- Kotlin (2016-)
+- Spring Framework (2009-)
+- Spring Boot (2013-)
 
-This starter is pretty basic and covers all of the essentials. All you have to do is start typing!
-
-The starter includes:
-
-- **light/dark mode**, depending on your preferences
-- great reading experience thanks to [**Inter UI font**](https://rsms.me/inter/), made by [Rasmus Andersson](https://rsms.me/about/)
-- nice code highlighting thanks to [**PrismJS**](https://prismjs.com)
-- responsive youtube/vimeo etc. videos thanks to [**gatsby-remark-embed-video**](https://github.com/borgfriend/gatsby-remark-embed-video)
-
-So, there you have it... enjoy!
+FF が好き。FF VIII がとっても好き。思春期真っ只中にリアルタイムプレイしたため、それはもうたくさん影響を受けた。
