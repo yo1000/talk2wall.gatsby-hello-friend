@@ -239,6 +239,10 @@ footer {
                 padding-bottom: 1rem;
             }
 
+            .twitter-tweet {
+                text-shadow: none;
+            }
+
             @media (--tablet) {
                 max-width: inherit !important
             }
