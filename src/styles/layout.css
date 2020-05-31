@@ -16,7 +16,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.54;
@@ -228,10 +227,6 @@ ul, ol {
 
 ol ol {
   list-style-type: lower-alpha;
-}
-
-button, input, textarea {
-  font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
 }
 
 .container {

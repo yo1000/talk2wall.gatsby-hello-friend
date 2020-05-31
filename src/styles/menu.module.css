@@ -169,7 +169,6 @@
 
 .menuArrow {
   display: inline-block;
-  font-family: 'Inter UI';
   margin-left: 5px;
   transform: rotate(90deg);
 }
