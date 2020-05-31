@@ -19,3 +19,7 @@ Spring, Kotlin, Java あたりをつかったサーバーサイド プログラ�
 - Spring Boot (2013-)
 
 FF が好きです。とくに FF VIII がすごく好きです。思春期真っ只中にリアルタイム プレイしたため、それはもうたくさんの影響を受けたのです。
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">FF8 Remastered おわった<br>20年ぶりのプレイは懐かしくもあり新鮮でもあった<br>この素晴らしき作品にリアル中2で出会えたことに感謝したい <a href="https://t.co/S4DuD54v1Y">pic.twitter.com/S4DuD54v1Y</a></p>&mdash; YO!CHI KIKUCHI (@yoichi_kikuchi) <a href="https://twitter.com/yoichi_kikuchi/status/1174752696760336386?ref_src=twsrc%5Etfw">September 19, 2019</a></blockquote>
