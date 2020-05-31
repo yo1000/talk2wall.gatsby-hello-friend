@@ -18,6 +18,7 @@
     "clean": "gatsby clean",
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "http": "http-server public",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
@@ -37,6 +38,7 @@
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-transformer-remark": "^2.1.19",
     "gatsby-transformer-sharp": "^2.1.8",
+    "http-server": "^0.12.3",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.0",
