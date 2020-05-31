@@ -123,6 +123,7 @@ JAR パッケージ内に `Premain-Class` 属性の設定されたマニフェ�
         <archive>
             <manifestEntries>
                 <Premain-Class>com.yo1000.demo.javaagent.DemoAgent</Premain-Class>
+
             </manifestEntries>
         </archive>
         <appendAssemblyId>false</appendAssemblyId>
