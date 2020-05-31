@@ -101,7 +101,7 @@ const Menu = ({
                 <span className={style.menuArrow}>></span>
               </button>
               {isSubMenuVisible ? (
-                <ul className={style.subMenu}>
+                <ul className={style.subMenu + ' subMenu'}>
                   <SubMenu
                     mainMenu={mainMenu}
                     mainMenuItems={mainMenuItems}

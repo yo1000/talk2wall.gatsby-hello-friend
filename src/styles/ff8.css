@@ -83,15 +83,13 @@ header {
             border-radius: 2px;
         }
 
+        /* Search Results */
         .navbar-dropdown {
             display: block;
             position: absolute;
             padding: 4px;
             margin: 4px 0;
             z-index: 10;
-            /* background: rgba(37,38,39,.975);
-            padding: 4px 12px;
-            border-radius: 0 0 4px 4px; */
 
             background: linear-gradient(90deg,rgba(68,68,68,.975),hsla(0,0%,45.5%,.975)) 50%;
             border-radius: 2px;
@@ -106,9 +104,70 @@ header {
                 padding: 0 8px;
                 text-align: left;
                 font-weight: 400;
+                cursor: crosshair;
 
                 &:hover {
-                    background: rgba(37,38,39,.5);
+                    background: rgba(37,38,39,.125);
+                    cursor: crosshair;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+
+                        background: url(/images/yubi.png) left 0rem top 0.5em no-repeat;
+                        background-size: 2em;
+                        width: 2rem;
+                        height: 2rem;
+                        left: -2rem;
+                        margin-left: .5rem;
+                        z-index: 100;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Header SubMenu */
+    .subMenu {
+        display: block;
+        position: absolute;
+        top: 25px;
+        overflow: visible;
+
+        padding: 4px;
+        margin: 4px 0;
+        z-index: 10;
+        background: linear-gradient(90deg,rgba(68,68,68,.975),hsla(0,0%,45.5%,.975)) 50% !important;
+        border-radius: 2px;
+        border-color: #747474 #313131 #313131 #747474;
+        border-style: groove ridge ridge groove;
+        border-width: 4px;
+        color: #aaa;
+        text-shadow: #443 1px 1px;
+
+        a {
+            padding: 0 8px;
+            text-align: left;
+            font-weight: 400;
+            cursor: crosshair;
+
+            &:hover {
+                background: rgba(37,38,39,.125);
+                cursor: crosshair;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+
+                    background: url(/images/yubi.png) left 0rem top 0.5em no-repeat;
+                    background-size: 2em;
+                    width: 2rem;
+                    height: 2rem;
+                    left: -2rem;
+                    margin-left: .5rem;
+                    z-index: 200;
                 }
             }
         }

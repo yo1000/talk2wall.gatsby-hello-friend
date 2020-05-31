@@ -88,49 +88,6 @@ const Header = props => {
       </>
     )}/>
   )
-  // return (
-  //   <>
-  //     <Helmet>
-  //       <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet"/>
-  //       <body
-  //         className={
-  //           (userTheme || defaultTheme) === 'light'
-  //             ? 'light-theme'
-  //             : 'dark-theme'
-  //         }
-  //       />
-  //     </Helmet>
-  //     <header className={style.header}>
-  //       <div className={style.inner}>
-  //         <Link to="/">
-  //           <div className={style.logo + ' nav-logo-container'}>
-  //             {siteLogo.src ? (
-  //               <img src={siteLogo.src} alt={siteLogo.alt} />
-  //             ) : (
-  //               <>
-  //                 <span className={style.mark + ' mark'}>></span>
-  //                 <span className={style.text + ' text'}>{logoText}</span>
-  //                 <span className={style.cursor + ' cursor'} />
-  //               </>
-  //             )}
-  //           </div>
-  //         </Link>
-  //         <span className={style.right}>
-  //           <Menu
-  //             mainMenu={mainMenu}
-  //             mainMenuItems={mainMenuItems}
-  //             isMobileMenuVisible={isMobileMenuVisible}
-  //             isSubMenuVisible={isSubMenuVisible}
-  //             menuMoreText={menuMoreText}
-  //             onToggleMobileMenu={onToggleMobileMenu}
-  //             onToggleSubMenu={onToggleSubMenu}
-  //             onChangeTheme={onChangeTheme}
-  //           />
-  //         </span>
-  //       </div>
-  //     </header>
-  //   </>
-  // )
 }
 
 Header.propTypes = {
