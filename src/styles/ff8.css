@@ -114,6 +114,13 @@ header {
     .mobileMenuContainer {
         margin-left: 10px;
     }
+
+    @media (--phone) {
+        .text,
+        .mark {
+            font-size: 14px;
+        }
+    }
 }
 
 footer {
@@ -122,15 +129,15 @@ footer {
     align-items: center;
     text-align: left !important;
     justify-content: space-between;
-    width: 800px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 800px;
     padding: 0 20px !important;
 
-    @media (max-width: 899px) {
-        max-width: 660px;
+    @media (--tablet) {
+        max-width: 800px !important;
     }
 
-    @media (max-width: 683px) {
+    @media (--phone) {
         display: initial !important;
         flex-direction: initial !important;
     }
@@ -147,85 +154,95 @@ footer {
     }
 }
 
-.post {
-    font-weight: 400;
-    margin: 0 auto 10px;
-
-    &:not(:last-of-type) {
-        border-bottom: 0 !important;
+.content {
+    @media (--tablet) {
+        max-width: inherit !important
     }
 
-    .postContent {
-        border-radius: 2px;
-        border-width: 6px;
-        border-style: groove ridge ridge groove; /* Top Right Bottom Left */
+    .post {
+        font-weight: 400;
+        margin: 0 auto 10px;
 
-        padding: 1rem 1.5rem 1.25rem;
-        color: rgba(237, 237, 237, .5625);
-        text-shadow: rgba( 65,  65,  49, .625) 1px 1px;
-
-        &:nth-of-type(1) {
-            margin-top: -2rem;
-        }
-      
-        h1, h2, h3, h4, h5, h6, strong {
-            color: #eee;
+        &:not(:last-of-type) {
+            border-bottom: 0 !important;
         }
 
-        h2, h3, h4, h5, h6 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
+        .postContent {
+            border-radius: 2px;
+            border-width: 6px;
+            border-style: groove ridge ridge groove; /* Top Right Bottom Left */
 
-        h1 {
-            font-size: 2rem;
-            text-shadow: #443 3px 3px;
-        }
+            padding: 1rem 1.5rem 1.25rem;
+            color: rgba(237, 237, 237, .5625);
+            text-shadow: rgba( 65,  65,  49, .625) 1px 1px;
 
-        h2, h3 {
-            text-shadow: #443 2px 2px;
-        }
-
-        h4, h5, h6, strong {
-            text-shadow: #443 1px 1px;
-        }
-
-        @media (--phone) {
-            padding: .75rem 1.25rem 1rem;
-        }
-
-        .navigation {
-            margin: 30px 0 0 !important;
-
-            a {
-                padding: 8px 16px 0;
+            &:nth-of-type(1) {
+                margin-top: -2rem;
             }
-        }
+        
+            h1, h2, h3, h4, h5, h6, strong {
+                color: #eee;
+            }
 
-        code {
-            color: #dede08;
-            text-shadow: #292929 1px 1px;
-            border: none;
-            background: none;
-            padding: 0;
-        }
+            h2, h3, h4, h5, h6 {
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
 
-        pre code {
-            color: inherit;
-            text-shadow: inherit;
-            border: inherit;
-            background: inherit;
-        }
+            h1 {
+                font-size: 2rem;
+                text-shadow: #443 3px 3px;
+            }
 
-        pre[class*=language-] {
-            border-radius: 4px;
-            overflow-y: hidden;
-        }
+            h2, h3 {
+                text-shadow: #443 2px 2px;
+            }
 
-        .line-numbers .line-numbers-rows {
-            top: 0;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
+            h4, h5, h6, strong {
+                text-shadow: #443 1px 1px;
+            }
+
+            .navigation {
+                margin: 30px 0 0 !important;
+
+                a {
+                    padding: 8px 16px 0;
+                }
+            }
+
+            code {
+                color: #dede08;
+                text-shadow: #292929 1px 1px;
+                border: none;
+                background: none;
+                padding: 0;
+            }
+
+            pre code {
+                color: inherit;
+                text-shadow: inherit;
+                border: inherit;
+                background: inherit;
+            }
+
+            pre[class*=language-] {
+                border-radius: 4px;
+                overflow-y: hidden;
+            }
+
+            .line-numbers .line-numbers-rows {
+                top: 0;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            @media (--tablet) {
+                max-width: inherit !important
+            }
+        
+            @media (--phone) {
+                padding: .75rem 1.25rem 1rem;
+            }
         }
     }
 }
