@@ -56,6 +56,8 @@ const Header = props => {
         />
       </Helmet>
       <header className={style.header}>
+        {/* for Preload */}
+        <img src="/images/yubi.png" style={{width:'1px', height:'1px', position:'absolute', top:'-1px'}}/>
         <div className={style.inner}>
           <Link to="/">
             <div className={style.logo + ' nav-logo-container'}>
