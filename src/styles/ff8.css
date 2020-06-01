@@ -81,6 +81,10 @@ header {
             padding: 4px;
             border-style: none;
             border-radius: 2px;
+
+            @media (--phone) {
+                width: 7rem;
+            }
         }
 
         /* Search Results */
