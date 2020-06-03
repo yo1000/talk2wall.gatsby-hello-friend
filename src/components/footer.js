@@ -12,13 +12,13 @@ const Footer = ({ copyrights }) => (
     ) : (
       <>
         <div className="footerCopyrights">
-          Copyright (C) 2019 Built with <a href="https://www.gatsbyjs.org">Gatsby</a> | Starter created by <a href="https://radoslawkoziel.pl">panr</a>
+          Copyright (C) 2017-{new Date().getFullYear()} <a href="https://github.com/yo1000" target="_blank" rel="noopener noreferrer">yo1000 | YO!CHI KIKUCHI</a>
         </div>
         <div className="footerCopyrights">
-          Copyright (C) 2017-{new Date().getFullYear()} yo1000 | YO!CHI KIKUCHI
+          Copyright (C) 2019 Built with <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> | Starter created by <a href="https://radoslawkoziel.pl" target="_blank" rel="noopener noreferrer">panr</a>
         </div>
         <div className="footerCopyrights">
-          Copyright (C) 1999, 2019 SQUARE ENIX CO., LTD. All Rights Reserved.
+          Copyright (C) 1999, 2019 <a href="https://www.jp.square-enix.com/ffviii/guideline.html" target="_blank" rel="noopener noreferrer">SQUARE ENIX CO., LTD.</a> All Rights Reserved.
         </div>
       </>
     )}
