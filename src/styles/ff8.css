@@ -238,7 +238,7 @@ footer {
             border-width: 6px;
             border-style: groove ridge ridge groove; /* Top Right Bottom Left */
 
-            padding: 1rem 1.5rem 1.25rem;
+            padding: 1rem 1.5rem 1.75rem;
             color: rgba(237, 237, 237, .5625);
             text-shadow: rgba( 65,  65,  49, .625) 1px 1px;
 
@@ -313,6 +313,10 @@ footer {
             @media (--phone) {
                 padding: .75rem 1.25rem 1rem;
             }
+        }
+
+        .navigation {
+            margin: 20px 0 0px!important;
         }
     }
 }
