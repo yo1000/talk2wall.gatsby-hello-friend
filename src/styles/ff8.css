@@ -222,7 +222,16 @@ footer {
 
 .content {
     @media (--tablet) {
-        max-width: inherit !important
+        max-width: inherit !important;
+    }
+
+    .infoBanner {
+        margin: 28px 0 40px !important;
+        background: transparent !important;
+        padding: 0;
+
+        color: #9494a4 !important;
+        text-shadow: #443 1px 1px !important;
     }
 
     .post {
